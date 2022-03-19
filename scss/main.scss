@@ -142,7 +142,8 @@ body {
           cursor: pointer;
 
           &:hover {
-            background-color: var(--light-grey);
+            background-color: var(--danger);
+            color: var(--white);
             transition: all .2s;
           }
 
