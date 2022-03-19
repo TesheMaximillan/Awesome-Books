@@ -5,7 +5,7 @@
   --white: #fff;
   --dark: #161515;
   --active: #14b3f1;
-  --danger: #ff0000;
+  --danger: #f00;
 }
 
 // ///////////////////////////// Mixin
@@ -64,13 +64,14 @@ body {
   background-color: var(--white);
   height: 100vh;
   padding: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0 2px 4px;
   display: flex;
   flex-direction: column;
 }
 
 .navbar {
   @include navmix(column);
+
   margin-bottom: 1rem;
 
   &-main {
@@ -84,11 +85,6 @@ body {
     &__list {
       display: flex;
 
-      .list-item:not(:last-child) {
-        padding-right: 1.5rem;
-        border-right: 2px solid var(--dark);
-      }
-
       .list-item {
         padding-left: 1.5rem;
         list-style: none;
@@ -98,6 +94,11 @@ body {
           text-decoration: none;
           color: var(--dark);
         }
+      }
+
+      .list-item:not(:last-child) {
+        padding-right: 1.5rem;
+        border-right: 2px solid var(--dark);
       }
     }
   }
@@ -110,7 +111,9 @@ body {
 
   .book-list {
     display: none;
+
     @include section;
+
     width: 100%;
 
     &__lists {
@@ -124,7 +127,7 @@ body {
       .books {
         display: flex;
         justify-content: space-between;
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         font-weight: 600;
 
         &:nth-child(odd) {
@@ -132,7 +135,7 @@ body {
         }
 
         &__remove {
-          padding: .5rem 2rem;
+          padding: 0.5rem 2rem;
           border: 2px solid var(--danger);
           border-radius: 3px;
           background-color: var(--white);
@@ -144,7 +147,7 @@ body {
           &:hover {
             background-color: var(--danger);
             color: var(--white);
-            transition: all .2s;
+            transition: all 0.2s;
           }
 
           &:hover:active {
@@ -157,7 +160,9 @@ body {
 
   .book-form {
     display: none;
+
     @include section;
+
     width: 50%;
 
     &__form {
@@ -167,10 +172,10 @@ body {
       display: flex;
       flex-direction: column;
 
-      .book-title>input,
-      .book-author>input {
+      .book-title > input,
+      .book-author > input {
         width: 100%;
-        padding: .5rem;
+        padding: 0.5rem;
         margin: 1rem 0;
         border: 2px solid var(--dark);
         border-radius: 3px;
@@ -185,12 +190,12 @@ body {
         align-self: flex-end;
         margin-top: 1rem;
         font-weight: 600;
-        padding: .5rem 2rem;
+        padding: 0.5rem 2rem;
         border: 2px solid var(--dark);
         background-color: var(--white);
         cursor: pointer;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        transition: all .2s;
+        box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
+        transition: all 0.2s;
 
         &:active {
           transform: translateY(2px);
@@ -201,6 +206,7 @@ body {
 
   .contact-info {
     display: none;
+
     @include section;
 
     p {
@@ -215,6 +221,7 @@ body {
 
 .copy-right {
   @include navmix(row);
+
   justify-content: space-between;
 
   .copy {
