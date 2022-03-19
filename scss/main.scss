@@ -5,6 +5,7 @@
   --white: #fff;
   --dark: #161515;
   --active: #14b3f1;
+  --danger: #ff0000;
 }
 
 // ///////////////////////////// Mixin
@@ -118,7 +119,7 @@ body {
       padding: 2rem;
       border: 3px solid var(--dark);
       max-height: calc(100vh - 35.68rem);
-      overflow: scroll;
+      overflow-y: auto;
 
       .books {
         display: flex;
@@ -132,12 +133,12 @@ body {
 
         &__remove {
           padding: .5rem 2rem;
-          border: 2px solid red;
+          border: 2px solid var(--danger);
           border-radius: 3px;
           background-color: var(--white);
           font-weight: 600;
           font-family: inherit;
-          color: red;
+          color: var(--danger);
           cursor: pointer;
 
           &:hover {
@@ -230,4 +231,6 @@ body {
 
 .empty-list {
   display: none;
+  margin-top: 5rem;
+  text-align: center;
 }
